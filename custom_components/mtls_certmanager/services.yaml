@@ -1,37 +1,15 @@
-
-create_ca:
-  description: "Erstellt eine neue CA"
+sync_ca:
+  description: "Synchronisiere CA und CRL zum Nginx Proxy Manager per SSH"
   fields:
-    ca_name:
-      description: "Name der neuen CA"
-      example: "home_ca"
-    subject:
-      description: "Subject, z.B. /CN=HomeCA"
-      example: "/CN=HomeCA"
-
-issue_certificate:
-  description: "Stellt ein Client-Zertifikat aus"
-  fields:
-    ca_name:
-      description: "Name der CA"
-    device_name:
-      description: "Name des Geräts (CN)"
-    valid_days:
-      description: "Gültigkeit in Tagen"
-      example: 365
-    p12_password:
-      description: "Passwort für .p12 Datei"
-
-revoke_certificate:
-  description: "Widerruft ein Zertifikat"
-  fields:
-    ca_name:
-      description: "Name der CA"
-    device_name:
-      description: "Name des Geräts"
-
-generate_crl:
-  description: "Erzeugt neue CRL"
-  fields:
-    ca_name:
-      description: "Name der CA"
+    npm_host:
+      description: "IP oder Hostname von NPM"
+      example: "192.168.1.10"
+    user:
+      description: "SSH-User"
+      example: "user"
+    password:
+      description: "SSH-Passwort"
+      example: "supersecure"
+    remote_path:
+      description: "Zielordner auf dem NPM-Host"
+      example: "/data/ssl"
