@@ -1,0 +1,37 @@
+
+create_ca:
+  description: "Erstellt eine neue CA"
+  fields:
+    ca_name:
+      description: "Name der neuen CA"
+      example: "home_ca"
+    subject:
+      description: "Subject, z.B. /CN=HomeCA"
+      example: "/CN=HomeCA"
+
+issue_certificate:
+  description: "Stellt ein Client-Zertifikat aus"
+  fields:
+    ca_name:
+      description: "Name der CA"
+    device_name:
+      description: "Name des Geräts (CN)"
+    valid_days:
+      description: "Gültigkeit in Tagen"
+      example: 365
+    p12_password:
+      description: "Passwort für .p12 Datei"
+
+revoke_certificate:
+  description: "Widerruft ein Zertifikat"
+  fields:
+    ca_name:
+      description: "Name der CA"
+    device_name:
+      description: "Name des Geräts"
+
+generate_crl:
+  description: "Erzeugt neue CRL"
+  fields:
+    ca_name:
+      description: "Name der CA"
