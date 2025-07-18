@@ -19,3 +19,9 @@ data:
   user: "user"
   password: "supersecure"
   remote_path: "/data/ssl"
+
+## Repository
+https://github.com/smarthomejoey/mtls_certmanager_hacs
+
+## Autor
+smarthomejoey
